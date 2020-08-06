@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/node": "^14.0.27",
+    "@types/node-fetch": "^2.5.7",
     "dotenv": "^8.2.0",
     "fm-data-api-client": "^1.0.2",
     "typescript": "^3.9.7"
@@ -13,5 +14,8 @@
   "scripts": {
     "start": "ts-node-dev --no-notify src/index.ts",
     "build": "tsc"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.56"
   }
 }
