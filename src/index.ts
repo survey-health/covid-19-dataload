@@ -20,8 +20,8 @@ const uploadFile = async (filePath: string, type: string) => {
     });
 
     const recordId = parseInt(record.recordId, 10)
-    //    upload(file: File | string, recordId: number, fieldName: string, fieldRepetition?: number): Promise<void>;
-    const upload = await layout.upload(
+
+    await layout.upload(
         filePath,
         recordId,
         "DataSource"
@@ -30,7 +30,7 @@ const uploadFile = async (filePath: string, type: string) => {
     const script = await layout.get(
         recordId,
         {
-            'script': "proccessCsv"
+            'script': "processCsv"
         }
     );
 
